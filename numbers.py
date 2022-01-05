@@ -27,5 +27,7 @@ class numbers:
             print('Value is not palindrome')
 
 
+
+
 num = numbers()
 num.checkPalindrome('xyx')
