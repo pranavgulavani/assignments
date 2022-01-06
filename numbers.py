@@ -60,11 +60,10 @@ class numbers:
                 print(f'{next}  {i}')
     #check prime
     def checkPrime(self,value):
-        if value <= 0:
+        if value <= 0 or value==1:
             return False
         counter =0
-        if value is 1:
-            return True
+        
         for i in range(2,value+1):
             if value % i == 0:
                 counter += 1
@@ -82,6 +81,18 @@ class numbers:
                 primes.append(listOfNumbers[index])
         return primes
 
+   
+    #num is sum of two primes
+    def checknum(self,num):
+        for i in range(num+1):
+            check = self.checkPrime(i)
+            if check and i <= num//2:
+                value = num- i
+                checknext = self.checkPrime(value)
+                if checknext:
+                    print(i,value)
+                
+
 
 num = numbers()
 #num.checkPalindrome(121)
@@ -91,6 +102,7 @@ num = numbers()
 #num.fibonacci(5)
 #val =num.checkPrime(10)
 #print(val)
-#values = [101, 7, 9, 3, 1, 91, 97, 555]
-#val =num.findPrime(values)
-#print(val)
+values = [101, 7, 9, 3, 1, 91, 97, 555]
+val =num.findPrime(values)
+print(val)
+#num.checknum(8)
