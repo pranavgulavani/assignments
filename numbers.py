@@ -32,17 +32,37 @@ class numbers:
             check = check//10
          
         return reverse
+
+      #GCD of two numbers  
     def GCD(self,val1,val2):
         if val2==0:
             return val1
         return self.GCD(val2,val1%val2)
-    
+    # LCM of tow numbers
     def LCM(self ,val1,val2):
         return val1*val2/self.GCD(val1,val2)
-        
+
+    #fibonacci series
+    def fibonacci(self,value):
+        first =0
+        second=1
+        if value <=0:
+            return print('Please enter positive integer')
+        elif value == 1:
+            return first
+        else:
+            print(first)
+            print(second)
+            for i in range(2,value):
+                next = first+second
+                first =second
+                second= next
+                print(f'{next}  {i}')
+
 
 num = numbers()
 #num.checkPalindrome(121)
 #num.reverse(113)
-print(num.GCD(18,12))
-print(num.LCM(30,20))
+#print(num.GCD(18,12))
+#print(num.LCM(30,20))
+#num.fibonacci(5)
