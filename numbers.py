@@ -58,6 +58,29 @@ class numbers:
                 first =second
                 second= next
                 print(f'{next}  {i}')
+    #check prime
+    def checkPrime(self,value):
+        if value <= 0:
+            return False
+        counter =0
+        if value is 1:
+            return True
+        for i in range(2,value+1):
+            if value % i == 0:
+                counter += 1
+            if counter >= 2:
+                return False
+        
+        return True   
+    
+    #find numbers in given number of series
+    def findPrime(self,listOfNumbers):
+        primes = []
+        for index in range(len(listOfNumbers)):
+            check = self.checkPrime(listOfNumbers[index])
+            if check == True:
+                primes.append(listOfNumbers[index])
+        return primes
 
 
 num = numbers()
@@ -66,3 +89,8 @@ num = numbers()
 #print(num.GCD(18,12))
 #print(num.LCM(30,20))
 #num.fibonacci(5)
+#val =num.checkPrime(10)
+#print(val)
+values = [101, 7, 9, 3, 1, 91, 97, 555]
+val =num.findPrime(values)
+print(val)
