@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Programs</title>
+</head>
+<body>
+    <script>
+        //Check if object is array or not 
+        function checkType(value){
+            console.log(value.constructor.name)
+        }
+    
+        let val = [1,2,3]
+        console.log(val)
+        //checkType(val)
+        // ----Ways to empty array----
+        
+        //val.length = 0
+        //val.splice(0,val.length)
+        //val =[]
+        //console.log(val)
+       
+        //----- Check if number is interger----
+
+       /* let num = 12
+        let num1 = -12
+        let num2 = 8.5
+        console.log(Number.isInteger(num),Number.isInteger(num1),Number.isInteger(num2))*/
+
+        //----- write function such that console.log(add(2)(4)(5)) --> 11
+        function add(x){
+            return function(y){ return function(z){return x+y+z}}
+        }
+        console.log(add(3)(4)(6))
+                    
+    </script>
+</body>
+</html>

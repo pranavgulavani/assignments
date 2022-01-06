@@ -91,6 +91,6 @@ num = numbers()
 #num.fibonacci(5)
 #val =num.checkPrime(10)
 #print(val)
-values = [101, 7, 9, 3, 1, 91, 97, 555]
-val =num.findPrime(values)
-print(val)
+#values = [101, 7, 9, 3, 1, 91, 97, 555]
+#val =num.findPrime(values)
+#print(val)
